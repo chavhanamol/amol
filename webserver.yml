@@ -7,7 +7,7 @@
       yum: name=httpd state=present
 
     - name: Amaneding webserver configuration file
-      copy: path=/var/www/html/index.html content="This is my git managed server file"
+      copy: dest=/var/www/html/index.html content="This is my git managed server file"
 
     - name: Starting webserver services
       service: name=httpd state=started
